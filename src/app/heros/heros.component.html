@@ -1,12 +1,9 @@
-<input type="text" placeholder="name">
+<body>
+<!-- <input  [(ngModel)]="hero.id" placeholder="id">
+<input [(ngModel)]="hero.name" placeholder="name">
+<input [(ngModel)]="hero.desc" placeholder="desc"> -->
 
-<input [(ngModel)]="hero.id" placeholder="id">
-<input [(ngModel)]="hero.desc" placeholder="desc">
-<input type="text" #input>
-<input type="text" #input1>
-<input type="text" #input2>
-
-<button (click)=additem(input.value,input1.value,input2.value)>Click Here to add to list</button>
+<!-- <button (click)=additem(input.value,input1.value,input2.value)>Click Here to add to list</button>-->
 <div class='projectstyle'>
 <h1>Details of {{hero.name | uppercase}}</h1>
 <h2>{{hero.id }}</h2>
@@ -14,4 +11,7 @@
 <h2>{{hero.desc}}</h2>
 </div>
 
-{{heros}}
+<ul>
+  <li class="listdesign" *ngFor="let temphero of localherolist" (click)=selected(temphero)>{{temphero.name}}</li>
+</ul>
+</body>

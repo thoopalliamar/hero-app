@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Hero} from '../Hero';
-import {Herolist} from '../Herolist';
+import {heros} from '../Herolist';
 
 @Component({
   selector: 'app-heros',
@@ -11,19 +11,20 @@ export class HerosComponent implements OnInit {
 
     hero : Hero ={
     id:1,
-    name :'building-1',
-    desc : 'description of project one.'
+    name :'building-1'
   }
-  heroList:Herolist;
-  additem(id,name,desc){
-    this.hero.id=id;
-    this.hero.name=name;
-    this.hero.desc=desc;
-   // this.heroList.heros.push(this.hero);
-  }
-  
+  localherolist = heros;
 
-  constructor() { }
+  selected(hero){
+    this.hero=hero;
+  }
+  // heroList:Herolist;
+  // additem(id,name,desc){
+  //   this.hero.id=id;
+  //   this.hero.name=name;
+  //   this.hero.desc=desc;
+   // this.heroList.heros.push(this.hero);
+ //  constructor() { }
 
   ngOnInit() {
   }

@@ -1,4 +1,18 @@
 .projectstyle{
   margin:20px;
   background-color: aqua;
+
+}
+.listdesign{
+    background-color: gainsboro;
+    border-radius: 3px;
+    margin: 2px;
+    
+}
+ul{
+ 
+}
+
+body{
+    background-color: beige;
 }
