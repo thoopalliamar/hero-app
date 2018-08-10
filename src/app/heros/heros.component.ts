@@ -9,24 +9,17 @@ import {heros} from '../Herolist';
 })
 export class HerosComponent implements OnInit {
 
-    hero : Hero ={
-    id:1,
-    name :'building-1'
-  }
-  localherolist = heros;
-
-  selected(hero){
-    this.hero=hero;
-  }
-  // heroList:Herolist;
-  // additem(id,name,desc){
-  //   this.hero.id=id;
-  //   this.hero.name=name;
-  //   this.hero.desc=desc;
-   // this.heroList.heros.push(this.hero);
- //  constructor() { }
-
+  heroes = heros;
+ 
+  selectedHero: Hero;
+ 
+ 
+  constructor() { }
+ 
   ngOnInit() {
   }
-
+ 
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
